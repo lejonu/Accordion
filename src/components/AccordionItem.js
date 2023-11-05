@@ -1,16 +1,19 @@
-import { useState } from "react";
-
-const AccordionItem = ({ number, title, text }) => {
-  const [isOpen, setIsOpen] = useState(false);
+const AccordionItem = ({
+  number,
+  title,
+  children,
+  curOpen,
+  onOpen
+}) => {
+  const isOpen = number === curOpen;
 
   function handleToggle() {
-    setIsOpen(isOpen => !isOpen);
+    onOpen(isOpen ? null : number);
   }
 
   return (
     <div
       className={`item ${isOpen ? "open" : ""}`}
-      // onClick={() => setIsOpen(!isOpen)}
       onClick={handleToggle}
     >
       <p className="number">
@@ -18,7 +21,7 @@ const AccordionItem = ({ number, title, text }) => {
       </p>
       <p className="title">{title}</p>
       <p className="icon">{isOpen ? "-" : "+"}</p>
-      {isOpen && <p className="content-box">{text}</p>}
+      {isOpen && <p className="content-box">{children}</p>}
     </div>
   );
 };
