@@ -2,4 +2,7 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-![](./public/Captura de tela de 2023-11-06 12-25-42.png)
+![](https://github.com/lejonu/Accordion/blob/main/public/Captura%20de%20tela%20de%202023-11-06%2012-25-42.png)
+
+
+
